@@ -65,3 +65,16 @@ Every component must be declared in `exactly one` NgModule.
 1. import
 2. declare
 
+The `*ngFor` is Angular's repeater `directive`.
+
+```
+<li *ngFor="let hero of heroes" (click)="onSelect(hero)">
+```
+
+This is an example of Angular's `event binding` syntax.
+
+```
+[class.selected]="hero === selectedHero"
+```
+
+The Angular `class binding` makes it easy to add and remove a CSS class conditionally.
