@@ -47,6 +47,8 @@ The ngOnInit is a `lifecycle hook`. Angular calls ngOnInit shortly after creatin
 
 A non-component heor.ts was created.
 
+## Two way data binding [()]
+
 ```
     <input [(ngModel)]="hero.name" placeholder="name"/>
 ```
@@ -67,14 +69,35 @@ Every component must be declared in `exactly one` NgModule.
 
 The `*ngFor` is Angular's repeater `directive`.
 
+## Event binding ()
+
 ```
 <li *ngFor="let hero of heroes" (click)="onSelect(hero)">
 ```
 
 This is an example of Angular's `event binding` syntax.
 
+## Class binding []
+
 ```
 [class.selected]="hero === selectedHero"
 ```
 
 The Angular `class binding` makes it easy to add and remove a CSS class conditionally.
+
+## Input property @Input()
+
+```
+@Input() hero: Hero;
+```
+
+The hero property must be an `Input` property, annotated with the @Input() decorator
+
+## Property binding []
+
+```
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+```
+
+[hero]="selectedHero" is an Angular `property binding`.
+
