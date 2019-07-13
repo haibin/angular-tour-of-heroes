@@ -101,3 +101,31 @@ The hero property must be an `Input` property, annotated with the @Input() decor
 
 [hero]="selectedHero" is an Angular `property binding`.
 
+
+## Call it in ngOnInit
+
+While you could call getHeroes() in the constructor, that's not the best practice.
+
+Reserve the constructor for simple initialization such as wiring constructor parameters to properties. The constructor shouldn't do anything. It certainly shouldn't call a function that makes HTTP requests to a remote server as a real data service would.
+
+
+## the RxJS of() function
+
+```
+getHeroes(): Observable<Hero[]> {
+  return of(HEROES);
+}
+```
+
+of(HEROES) returns an Observable<Hero[]> that emits a single value, the array of mock heroes.
+
+## Public vs Private
+
+```
+    constructor(public messageService: MessageService) {}
+```
+
+The messageService property must be public because you're about to bind to it in the template.
+
+Angular only binds to public component properties.
+
