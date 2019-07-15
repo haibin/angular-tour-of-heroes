@@ -129,3 +129,18 @@ The messageService property must be public because you're about to bind to it in
 
 Angular only binds to public component properties.
 
+# Routing module
+
+In Angular, the best practice is to load and configure the router in a separate, top-level module that is dedicated to routing and imported by the root AppModule.
+
+```
+ng generate module app-routing --flat --module=app
+```
+
+--flat puts the file in src/app instead of its own folder.
+--module=app tells the CLI to register it in the imports array of the AppModule.
+
+The `RouterOutlet` is one of the router directives
+
+The `routerLink` is the selector for the RouterLink directive that turns user clicks into router navigations. It's another of the public directives in the RouterModule.
+
