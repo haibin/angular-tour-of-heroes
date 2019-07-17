@@ -129,7 +129,7 @@ The messageService property must be public because you're about to bind to it in
 
 Angular only binds to public component properties.
 
-# Routing module
+## Routing module
 
 In Angular, the best practice is to load and configure the router in a separate, top-level module that is dedicated to routing and imported by the root AppModule.
 
@@ -144,3 +144,22 @@ The `RouterOutlet` is one of the router directives
 
 The `routerLink` is the selector for the RouterLink directive that turns user clicks into router navigations. It's another of the public directives in the RouterModule.
 
+## AsyncPipe
+
+```
+<li *ngFor="let hero of heroes$ | async" >
+```
+
+The $ is a convention that indicates heroes$ is an Observable, not an array.
+
+
+## RxJS Subject
+
+
+```
+import { Observable, Subject } from 'rxjs';
+
+
+  private searchTerms = new Subject<string>();
+
+```
