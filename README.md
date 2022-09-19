@@ -155,7 +155,7 @@ The $ is a convention that indicates heroes$ is an Observable, not an array.
 
 ## RxJS Subject
 
-hello wo1ld
+hello world
 
 ```
 import { Observable, Subject } from 'rxjs';
