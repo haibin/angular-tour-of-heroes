@@ -153,7 +153,7 @@ The `routerLink` is the selector for the RouterLink directive that turns user cl
 The $ is a convention that indicates heroes$ is an Observable, not an array.
 
 
-## RxJS Subject
+## RxJS 1 Subject
 
 
 ```
